@@ -27,7 +27,7 @@ contract Deploy is Script {
         vault.seedHouse(HOUSE_SEED);
     }
 
-    /// @notice Entrypoint for `forge script`: reads signers from env, broadcasts deployment, and writes JSON.
+    /// @notice Reads signers from env, broadcasts deployment, and writes JSON to out/base-sepolia.latest.json.
     function run() external {
         address withdrawSigner = vm.envAddress("WITHDRAW_SIGNER");
         address relayer = vm.envAddress("RELAYER");
@@ -36,14 +36,24 @@ contract Deploy is Script {
         (TestUSDC token, Tap2StacksVault vault, ProofAnchor anchor) = deploy(withdrawSigner, relayer);
         vm.stopBroadcast();
 
+        writeDeploymentOutput(address(token), address(vault), address(anchor), withdrawSigner, relayer);
+    }
+
+    function writeDeploymentOutput(
+        address token,
+        address vault,
+        address anchor,
+        address withdrawSigner,
+        address relayer
+    ) internal {
         string memory obj = "deployment";
         vm.serializeUint(obj, "chainId", block.chainid);
-        vm.serializeAddress(obj, "testUSDC", address(token));
-        vm.serializeAddress(obj, "vault", address(vault));
-        vm.serializeAddress(obj, "proofAnchor", address(anchor));
+        vm.serializeAddress(obj, "testUSDC", token);
+        vm.serializeAddress(obj, "vault", vault);
+        vm.serializeAddress(obj, "proofAnchor", anchor);
         vm.serializeAddress(obj, "withdrawSigner", withdrawSigner);
         vm.serializeAddress(obj, "relayer", relayer);
         string memory json = vm.serializeUint(obj, "deployBlock", block.number);
-        vm.writeJson(json, "./deployments/base-sepolia.json");
+        vm.writeJson(json, "./out/base-sepolia.latest.json");
     }
 }

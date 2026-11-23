@@ -44,6 +44,15 @@ contract Tap2StacksVaultTest is Test {
         return abi.encodePacked(r, s, v);
     }
 
+    function test_eip712Domain() public view {
+        (, string memory name, string memory version, uint256 chainId, address verifyingContract,,) =
+            vault.eip712Domain();
+        assertEq(name, "Tap2StacksVault");
+        assertEq(version, "1");
+        assertEq(chainId, block.chainid);
+        assertEq(verifyingContract, address(vault));
+    }
+
     function test_depositPullsTokensAndEmits() public {
         vm.startPrank(alice);
         token.approve(address(vault), 50e6);

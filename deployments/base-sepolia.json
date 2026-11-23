@@ -1,0 +1,58 @@
+{
+  "chainId": 84532,
+  "deployBlock": 62476617,
+  "testUSDC": "0xb91410a49868827FF592f2d90E11eD85240E468e",
+  "vault": "0xa491f306B41Ecee5EC38dFb21D0708Ac8933F216",
+  "proofAnchor": "0xad7ec69738307E9797bF63530b2dAb0E17aaC194",
+  "deployer": "0xcd1b5f2Cc1C6f784EA730087FbD27ea350Ec72ad",
+  "withdrawSigner": "0x47b6Bf3E982B24Bb90130263e5c2e5356ef0e968",
+  "relayer": "0x9496715bc9c691EA600C203B670452166f0f5ff7",
+  "verifiedOn": "Blockscout",
+  "explorer": {
+    "testUSDC": "https://base-sepolia.blockscout.com/address/0xb91410a49868827FF592f2d90E11eD85240E468e?tab=contract",
+    "vault": "https://base-sepolia.blockscout.com/address/0xa491f306B41Ecee5EC38dFb21D0708Ac8933F216?tab=contract",
+    "proofAnchor": "https://base-sepolia.blockscout.com/address/0xad7ec69738307E9797bF63530b2dAb0E17aaC194?tab=contract"
+  },
+  "transactions": {
+    "deployTestUSDC": {
+      "block": 62476617,
+      "hash": "0x10d711e2b3dd11eedf31056bacbf11cfd6b8515c9eb462cf1e5c42cef5b09d82",
+      "explorerUrl": "https://base-sepolia.blockscout.com/tx/0x10d711e2b3dd11eedf31056bacbf11cfd6b8515c9eb462cf1e5c42cef5b09d82"
+    },
+    "deployVault": {
+      "block": 62476619,
+      "hash": "0x17231dcb4d58501093b0e0956f94caf0b1686a73b9809a8c07dcf107a7cf5b08",
+      "explorerUrl": "https://base-sepolia.blockscout.com/tx/0x17231dcb4d58501093b0e0956f94caf0b1686a73b9809a8c07dcf107a7cf5b08"
+    },
+    "deployProofAnchor": {
+      "block": 62476629,
+      "hash": "0x67eea4c52c17e19e1b9f8f1b5e7fec618e78d340f57b07172094dd2776dde3b2",
+      "explorerUrl": "https://base-sepolia.blockscout.com/tx/0x67eea4c52c17e19e1b9f8f1b5e7fec618e78d340f57b07172094dd2776dde3b2"
+    },
+    "mintHouseSeed": {
+      "block": 62476631,
+      "hash": "0x694879ccd31cdf6edae3350bd6b7139b5cc002073b56498f7ddf8ea49521da8d",
+      "explorerUrl": "https://base-sepolia.blockscout.com/tx/0x694879ccd31cdf6edae3350bd6b7139b5cc002073b56498f7ddf8ea49521da8d"
+    },
+    "approveHouseSeed": {
+      "block": 62476633,
+      "hash": "0x27b0b1e33802c15696909010af7bf0b5c5963c592139ff407824d93327f27cd3",
+      "explorerUrl": "https://base-sepolia.blockscout.com/tx/0x27b0b1e33802c15696909010af7bf0b5c5963c592139ff407824d93327f27cd3"
+    },
+    "seedHouse": {
+      "block": 62476641,
+      "hash": "0xb28972cdf6272710624cf39cad281d7a8b33c06e5072e7ca0574f2767d6a2075",
+      "explorerUrl": "https://base-sepolia.blockscout.com/tx/0xb28972cdf6272710624cf39cad281d7a8b33c06e5072e7ca0574f2767d6a2075"
+    }
+  },
+  "superseded": [
+    {
+      "status": "superseded",
+      "chainId": 84532,
+      "deployBlock": 62466799,
+      "testUSDC": "0xBEc43e6bf2ddDB913BB96E77139A51003Ca33E7F",
+      "vault": "0x5cFC0D4Eb29cbfA4a3cdB51167d23012a230De6d",
+      "proofAnchor": "0x00D127177b33Dbb7453c343dd948734cD75544b4"
+    }
+  ]
+}
